@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name" translatable="false">NotaBene</string>
+    <string name="success">Success! Message sent !</string>
+<string name="error">Sending error</string>
+<string name="noclient">"Ops... System can't find default email application"</string>
+    <string name="empty">Please create message first</string>
+    <string name="send">Send</string>
+    <string name="mic">on/off</string>
+    <string name="recognizedText">recognized text</string>
+<string name="noInternet">No internet connection, recognition is not available, type or try later</string>
+    <string name="prefSaved">Saved successfully</string>
+    <string name="save">Save</string>
+    <string name="prefSaveError">Oops! can not save data</string>
+    <string name="setupFieldError">Please enter correct SUBJECT and EMAIL TO</string>
+    <string name="listening">listening...</string>
+    <string name="listeningStopped">listening stopped</string>
+    <string name="stop">Stop</string>
+    <string name="permissionGranted">Audio permission granted</string>
+    <string name="permissionDenied">Audio permission DENIED</string>
+    <string name="subject">Subject</string>
+    <string name="emailTo">email to</string>
+    <string name="emailFrom">email from*</string>
+    <string name="password">Password*</string>
+    <string name="authComments">*- Credentials for Gmail account (Less secure apps access ON required). In case of lack or not valid authentication data the application will use default email client for sending message</string>
+    <string name="initialSetup">This is first start initial setup. Please choose your preferenses</string>
+    <string name="darkTheme">Dark theme</string>
+
+</resources>

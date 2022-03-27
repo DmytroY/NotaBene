@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">NotaBene</string>
+    <string name="success">Листа надіслано!</string>
+    <string name="error">Помилка при надсиланні повідомлення</string>
+    <string name="noclient">Йой! Не визначено поштовий клієнт за замовчуванням"</string>
+    <string name="empty">Створіть повідомлення!</string>
+    <string name="send">Надіслати</string>
+    <string name="mic">вкл/викл</string>
+    <string name="recognizedText">розпізнаний текст</string>
+    <string name="noInternet">Розпізнавання офлан неможливе. Друкуйте або спробуйте
+        пізніше</string>
+    <string name="prefSaved">Збережено</string>
+    <string name="save">Зберегти</string>
+    <string name="prefSaveError">Йой! не збережено!</string>
+    <string name="setupFieldError">Перевірте ТЕМУ і ОТРИМУВАЧА</string>
+    <string name="listening">Слухаю...</string>
+    <string name="listeningStopped">Розпізнавання зупинено</string>
+    <string name="stop">Зупинити</string>
+    <string name="permissionGranted">Мікрофон: надано доступ</string>
+    <string name="permissionDenied">Мікрофон: заборонено доступ</string>
+    <string name="subject">Тема повідомлення</string>
+    <string name="emailTo">email отримувача</string>
+    <string name="emailFrom">email відправника*</string>
+    <string name="password">Пароль відправника*</string>
+    <string name="authComments">*- Данні для входу до Gmail (Потребує дозволу для Less secure apps). Застосунок скористається наявним поштовим клієнтом якщо ці поля пусті або невірно заповнені</string>
+    <string name="initialSetup">Застосунок запущено вперше. Зробіть налаштування.</string>
+    <string name="darkTheme">Темна тема</string>
+
+</resources>
