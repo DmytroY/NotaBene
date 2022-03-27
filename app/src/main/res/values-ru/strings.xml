@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">NotaBene</string>
+    <string name="success">Сообщение отослано</string>
+    <string name="error">Ошибка отсылки сообщения</string>
+    <string name="noclient">"Ошибка. Нет почтового клиента по умолчанию"</string>
+    <string name="empty">Создайте сообшение!</string>
+    <string name="send">Отправить</string>
+    <string name="mic">вкл/выкл</string>
+    <string name="recognizedText">распознаный текст</string>
+    <string name="noInternet">Невозможно распознавание офлайн. Печатайте или попробуйте позже</string>
+    <string name="prefSaved">Сохранено</string>
+    <string name="save">Сохранить</string>
+    <string name="prefSaveError">Ошибка. Не сохранено</string>
+    <string name="setupFieldError">Проверьте ТЕМУ и ПОЛУЧАТЕЛЯ</string>
+    <string name="listening">Слушаю...</string>
+    <string name="listeningStopped">Распознавание остановлено</string>
+    <string name="stop">Стоп</string>
+    <string name="permissionGranted">Дан доступ к микрофону</string>
+    <string name="permissionDenied">Нет доступа к микрофону</string>
+    <string name="subject">Тема сообщения</string>
+    <string name="emailTo">email получателя</string>
+    <string name="emailFrom">email отправителя*</string>
+    <string name="password">Пароль отправителя*</string>
+    <string name="authComments">*- Данные входа в Gmail (Требуется разрешение для Less secure apps). Приложение отошлет сообщение через встроенный почтовый клиент если эти поля пустые или заполнены неправильно</string>
+    <string name="initialSetup">Это приложение управляется прикосновениями к экрану. Вы не должны использовать это приложение во время вождения если это не разрешено правилами вашей страны.</string>
+    <string name="darkTheme">Темная тема</string>
+    <string name="agree">Согласен</string>
+    <string name="warning">Предупреждение!</string>
+    <string name="requiredField">заполните email получателя в настройках</string>
+
+</resources>
