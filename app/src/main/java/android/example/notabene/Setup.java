@@ -45,6 +45,7 @@ public class Setup extends AppCompatActivity {
         textViewFrom.setText(getPref("from"));
         textViewTo.setText(getPref("to"));
         textViewPassw.setText(getPref("password"));
+<<<<<<< HEAD
         isDarkTheme = getPref("isDarkTheme");
         if (Boolean.parseBoolean(isDarkTheme)){
             swDarkTheme.setChecked(true);
@@ -57,6 +58,12 @@ public class Setup extends AppCompatActivity {
             textViewTo.requestFocus();
         }
 
+=======
+        if (Boolean.parseBoolean(getPref("isDarkTheme"))){
+            swDarkTheme.setChecked(true);
+        }
+
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
         // if dark/light Theme is Checked
         swDarkTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -74,6 +81,7 @@ public class Setup extends AppCompatActivity {
                 String to = textViewTo.getText().toString();
                 String passw = textViewPassw.getText().toString();
 
+<<<<<<< HEAD
                 boolean validEmail = to.matches("^[a-zA-Z0-9@.]+$");
 
                 // check fields entry and validity of email format
@@ -86,6 +94,22 @@ public class Setup extends AppCompatActivity {
                 } else {
                     //Toast.makeText(getApplicationContext(),"Please imput valid emails", Toast.LENGTH_SHORT).show();
                     Snackbar.make(parentLayout, R.string.setupFieldError, Snackbar.LENGTH_INDEFINITE).show();
+=======
+
+                // check fields entry and validity of email format
+                if (subject.length()>0 && to.indexOf("@") != -1 && to.indexOf(".") != -1) {
+                    if ( setPref("subject", subject) && setPref("from", from) && setPref("to", to) && setPref("password", passw) && setPref("isDarkTheme", isDarkTheme)) {
+                        Snackbar.make(parentLayout, R.string.prefSaved, Snackbar.LENGTH_INDEFINITE)
+                                .show();
+                    } else {
+                        Snackbar.make(parentLayout, R.string.prefSaveError, Snackbar.LENGTH_INDEFINITE)
+                                .show();
+                    }
+                } else {
+                    //Toast.makeText(getApplicationContext(),"Please imput valid emails", Toast.LENGTH_SHORT).show();
+                    Snackbar.make(parentLayout, R.string.setupFieldError, Snackbar.LENGTH_INDEFINITE)
+                            .show();
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                 }
             }
         });

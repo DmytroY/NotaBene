@@ -1,7 +1,10 @@
 package android.example.notabene;
 
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
 import androidx.appcompat.app.AlertDialog;
+=======
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
@@ -10,7 +13,10 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+<<<<<<< HEAD
 import android.content.DialogInterface;
+=======
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -70,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         mSubject =prefs.getString("subject","");
         isDarkTheme = prefs.getString("isDarkTheme","");
 
+<<<<<<< HEAD
 
 
         // In case of application starts first time show warning than redirect to initial setup screen
@@ -95,6 +102,19 @@ public class MainActivity extends AppCompatActivity {
         // check audio permissions for speech recogniser
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
+=======
+        // Ask user for initial setup in case of application starts first time
+        if (mEmail.length() == 0 || mSubject.length() == 0) {
+            Toast.makeText(this, R.string.initialSetup,
+                    Toast.LENGTH_LONG).show();
+            // Set default subject
+            editor = prefs.edit();
+            editor.putString("subject","NotaBene");
+            editor.commit();
+            // call setup menu
+            Intent intent = new Intent(this, Setup.class);
+            this.startActivity(intent);
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
         }
 
         // switch Theme according to preferences
@@ -104,22 +124,43 @@ public class MainActivity extends AppCompatActivity {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
+<<<<<<< HEAD
+=======
+        // check audio permissions for speech recogniser
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
+        }
+
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
         // handler will processed feedback from JavaMailAPI thread
         myHandler = new Handler(Looper.getMainLooper()) {
             public void handleMessage(android.os.Message msg) {
                 switch (msg.what) {
+<<<<<<< HEAD
                     case STATUS_SENT:
                         // message has been sent successfully by JavaMailAPI
+=======
+
+                    case STATUS_SENT:
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                         Snackbar.make(parentLayout, R.string.success, Snackbar.LENGTH_INDEFINITE).show();
                         textViewMessage.setText("");
                         buttonSend.setEnabled(true);
                         break;
                     case STATUS_ERROR:
+<<<<<<< HEAD
                         // attempt of emailing by JavaMailAPI is failed. Message will be send with intent by default email application
                         emailIntent();
                         break;
                     case STATUS_NO_CLIENT:
                         // no default email application
+=======
+                        // this code will perform in case direct emailing by JavaMailAPI is impossible (for example in case of no internet)
+                        // so message will be send with intent and default email application of android system
+                        emailIntent();
+                        break;
+                    case STATUS_NO_CLIENT:
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                         Snackbar.make(parentLayout, R.string.noclient, Snackbar.LENGTH_LONG).show();
                         break;
                     case STATUS_SENTBYCLIENT:
@@ -140,7 +181,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!micIsActive) {
+<<<<<<< HEAD
                     // internet connection is required for speech recognition
+=======
+                    // check internet connection required for speech recognition
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                     if (!isOnline(getApplicationContext())) {
                         Snackbar.make(parentLayout, R.string.noInternet, Snackbar.LENGTH_LONG).show();
                         return;
@@ -154,7 +199,12 @@ public class MainActivity extends AppCompatActivity {
                                     // stop listening
                                     micIsActive = false;
                                     speechRecognizer.stopListening();
+<<<<<<< HEAD
                                     Snackbar.make(parentLayout, R.string.listeningStopped, Snackbar.LENGTH_SHORT).show();
+=======
+                                    Snackbar.make(parentLayout, R.string.listeningStopped, Snackbar.LENGTH_SHORT)
+                                            .show();
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                                 }
                             })
                             .show();
@@ -170,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
 
         speechRecognizer.setRecognitionListener(new RecognitionListener() {
             @Override
+<<<<<<< HEAD
             public void onReadyForSpeech(Bundle bundle) { }
 
             @Override
@@ -186,6 +237,24 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(int i) { }
+=======
+            public void onReadyForSpeech(Bundle bundle) {            }
+
+            @Override
+            public void onBeginningOfSpeech() {            }
+
+            @Override
+            public void onRmsChanged(float v) {            }
+
+            @Override
+            public void onBufferReceived(byte[] bytes) {            }
+
+            @Override
+            public void onEndOfSpeech() {            }
+
+            @Override
+            public void onError(int i) {            }
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
 
             @Override
             public void onResults(Bundle results) {
@@ -197,10 +266,17 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
+<<<<<<< HEAD
             public void onPartialResults(Bundle bundle) { }
 
             @Override
             public void onEvent(int i, Bundle bundle) { }
+=======
+            public void onPartialResults(Bundle bundle) {            }
+
+            @Override
+            public void onEvent(int i, Bundle bundle) {            }
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
         });
 
         // sending message
@@ -211,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
                 // in case of it is impossible JavaMailAPI throws an error then
                 // handler send the message by intent with default email client
                 mMessage = textViewMessage.getText().toString();
+<<<<<<< HEAD
                 mEmail = prefs.getString("to","");
                 if (mMessage.length() == 0){
                     // user forget create message
@@ -222,6 +299,13 @@ public class MainActivity extends AppCompatActivity {
                     buttonSend.setEnabled(false);
                     // load data from preferences
                     prefs = getSharedPreferences(PREF, Context.MODE_PRIVATE);
+=======
+                if (mMessage.length()>0) {
+                    buttonSend.setEnabled(false);
+                    // load data rom preferences
+                    prefs = getSharedPreferences(PREF, Context.MODE_PRIVATE);
+                    mEmail = prefs.getString("to","");
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                     mSubject =prefs.getString("subject","");
                     mFrom = prefs.getString("from","");
                     mPassword = prefs.getString("password", "");
@@ -236,17 +320,26 @@ public class MainActivity extends AppCompatActivity {
                     };
                     Thread thread = new Thread(runnable);
                     thread.start();
+<<<<<<< HEAD
+=======
+                } else {
+                    // in case of user forget create message
+                    Snackbar.make(parentLayout, R.string.empty, Snackbar.LENGTH_SHORT).show();
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
                 }
             }
         });
     }
 
+<<<<<<< HEAD
     // call setup menu
     protected  void callSetupMenu() {
         Intent intent = new Intent(this, Setup.class);
         this.startActivity(intent);
     }
 
+=======
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
     // sending email by intent with default email client
     protected void emailIntent() {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -263,7 +356,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+<<<<<<< HEAD
     // inflating menu
+=======
+    // to inflate menu
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -271,10 +368,18 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+<<<<<<< HEAD
     // processing menu item selected
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         callSetupMenu();
+=======
+    // to process menu item selected
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent = new Intent(this, Setup.class);
+        this.startActivity(intent);
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
         return true;
     }
 

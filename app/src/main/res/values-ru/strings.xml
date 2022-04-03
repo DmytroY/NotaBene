@@ -22,10 +22,15 @@
     <string name="emailFrom">email отправителя*</string>
     <string name="password">Пароль отправителя*</string>
     <string name="authComments">*- Данные входа в Gmail (Требуется разрешение для Less secure apps). Приложение отошлет сообщение через встроенный почтовый клиент если эти поля пустые или заполнены неправильно</string>
+<<<<<<< HEAD
     <string name="initialSetup">Это приложение управляется прикосновениями к экрану. Вы не должны использовать это приложение во время вождения если это не разрешено правилами вашей страны.</string>
     <string name="darkTheme">Темная тема</string>
     <string name="agree">Согласен</string>
     <string name="warning">Предупреждение!</string>
     <string name="requiredField">заполните email получателя в настройках</string>
+=======
+    <string name="initialSetup">Первый запуск. Выберите настройки</string>
+    <string name="darkTheme">Темная тема</string>
+>>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
 
 </resources>
