@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">NotaBene</string>
     <string name="success">Success! Message sent !</string>
 <string name="error">Sending error</string>
-<string name="noclient">"Ops... System can't find default email application"</string>
+<string name="noclient">"Ops! System can't find default email application"</string>
     <string name="empty">Please create message first</string>
     <string name="send">Send</string>
     <string name="mic">on/off</string>
@@ -12,7 +12,7 @@
     <string name="save">Save</string>
     <string name="prefSaveError">Oops! can not save data</string>
     <string name="setupFieldError">Please enter correct SUBJECT and EMAIL TO</string>
-    <string name="listening">listening...</string>
+    <string name="listening">listening…</string>
     <string name="listeningStopped">listening stopped</string>
     <string name="stop">Stop</string>
     <string name="permissionGranted">Audio permission granted</string>
@@ -22,15 +22,11 @@
     <string name="emailFrom">email from*</string>
     <string name="password">Password*</string>
     <string name="authComments">*- Credentials for Gmail account (Less secure apps access ON required). In case of lack or not valid authentication data the application will use default email client for sending message</string>
-<<<<<<< HEAD
     <string name="initialSetup">This application uses touchscreen. You should not use this application while driving if it is not allowed by your country regulations.</string>
     <string name="darkTheme">Dark theme</string>
     <string name="agree">Agree</string>
     <string name="warning">Warning!</string>
     <string name="requiredField">\'email to\' is required</string>
-=======
-    <string name="initialSetup">This is first start initial setup. Please choose your preferenses</string>
-    <string name="darkTheme">Dark theme</string>
->>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
+
 
 </resources>

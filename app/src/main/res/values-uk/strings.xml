@@ -23,15 +23,10 @@
     <string name="emailFrom">email відправника*</string>
     <string name="password">Пароль відправника*</string>
     <string name="authComments">*- Данні для входу до Gmail (Потребує дозволу для Less secure apps). Застосунок скористається наявним поштовим клієнтом якщо ці поля пусті або невірно заповнені</string>
-<<<<<<< HEAD
     <string name="initialSetup">Ця програма потребує дотиків до екрану. Ви не повинні використовувати цю програму за кермом, якщо це не дозволено правилами вашої країни.</string>
     <string name="darkTheme">Темна тема</string>
     <string name="agree">Погоджуюсь</string>
     <string name="warning">Попередження!</string>
     <string name="requiredField">заповніть email отримувача в налаштуваннях</string>
-=======
-    <string name="initialSetup">Застосунок запущено вперше. Зробіть налаштування.</string>
-    <string name="darkTheme">Темна тема</string>
->>>>>>> 35a7748f08c7c4b7dac3d1f124450a9e291319e6
 
 </resources>
