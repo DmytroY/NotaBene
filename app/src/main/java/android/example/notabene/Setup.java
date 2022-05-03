@@ -56,7 +56,7 @@ public class Setup extends AppCompatActivity {
         swDarkTheme.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                isDarkTheme = new Boolean(isChecked).toString();
+                isDarkTheme = Boolean.valueOf(isChecked).toString();
             }
         });
 
@@ -70,8 +70,8 @@ public class Setup extends AppCompatActivity {
                 String passw = textViewPassw.getText().toString();
 
                 // check fields entry and validity of email format
-                boolean validEmail = to.matches("^[a-zA-Z0-9@.]+$");
-                if (subject.length()>0 && to.indexOf("@") != -1 && to.indexOf(".") != -1 && validEmail) {
+                boolean validEmail = to.matches("^[a-zA-Z0-9@._-]+$");
+                if (subject.length()>0 && to.contains("@") && to.contains(".") && validEmail) {
                     if ( setPref("subject", subject) && setPref("from", from) && setPref("to", to) && setPref("password", passw) && setPref("isDarkTheme", isDarkTheme)) {
                         Snackbar.make(parentLayout, R.string.prefSaved, Snackbar.LENGTH_INDEFINITE).show();
                     } else {
@@ -88,11 +88,7 @@ public class Setup extends AppCompatActivity {
     // save preferences
     public boolean setPref(String key, String value) {
         editor.putString(key, value);
-        if (editor.commit()) {
-            return true;
-        } else {
-            return false;
-        }
+        return editor.commit();
     }
 
     // load preferences
